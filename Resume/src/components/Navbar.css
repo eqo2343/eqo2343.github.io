@@ -1,0 +1,10 @@
+/* nav > * {
+    transition: 0.3s;
+}
+
+nav > *:hover {
+    background-color: rgb(125, 211, 252);
+    color: white;
+    transform: scale(1.03);
+}
+ */

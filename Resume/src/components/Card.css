@@ -1,0 +1,72 @@
+#card > * {
+    width: 100%;
+    transition: 0.3s;
+}
+
+#card > *:hover {
+    background-color: rgb(125, 211, 252);
+    color: white;
+    transform: scale(1.03);
+}
+
+#navCard {
+    width: 100%;
+    transition: 0.3s;
+}
+
+#navCard:hover {
+    background-color: rgb(125, 211, 252);
+    color: white;
+    transform: scale(1.03);
+}
+
+#navCard2 {
+    width: 100%;
+    transition: 0.3s;
+}
+
+#navCard2:hover {
+    background-color: rgb(125, 211, 252);
+    color: white;
+    transform: scale(1.03);
+}
+
+#navCard3 {
+    width: 100%;
+    transition: 0.3s;
+}
+
+#navCard3:hover {
+    background-color: rgb(125, 211, 252);
+    color: white;
+    transform: scale(1.03);
+}
+
+#navCard4 {
+    width: 100%;
+    transition: 0.3s;
+}
+
+#navCard4:hover {
+    background-color: rgb(125, 211, 252);
+    color: white;
+    transform: scale(1.03);
+}
+
+
+#drop {
+    width: 100%;
+    transition: 0.3s;
+}
+
+#drop:hover {
+    background-color: rgb(125, 211, 252);
+    color: white;
+    transform: scale(1.03);
+}
+
+#drop > *:hover {
+    background-color: rgb(125, 211, 252);
+    color: white;
+    transform: scale(1.03);
+}

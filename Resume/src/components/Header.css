@@ -1,0 +1,11 @@
+header > * {
+    width: 100%;
+    transition: 0.3s;
+    
+}
+
+header > *:hover {
+    background-color: rgb(125, 211, 252);
+    color: white;
+    transform: scale(1.03);
+}
