@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav className='flex gap-4 flex-col'>
         <Dropdown id="drop" />
         <Card id='navCard' >
-          Job App
+          Book Nook [CRUD]
         </Card>
         <Card id='navCard3' >
           Hardlee's App
