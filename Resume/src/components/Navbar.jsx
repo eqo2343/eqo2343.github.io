@@ -3,12 +3,17 @@ import Card from './Card'
 import Dropdown from './Dropdown'
 import './Navbar.css'
 
-const Navbar = () => {
+const Navbar = ({ onChange }) => {
+
+  const handler = () => {
+    onChange();
+  }
+
   return (
     <nav className='flex gap-4 flex-col'>
         <Dropdown id="drop" />
-        <Card id='navCard' >
-          Book Nook [CRUD]
+        <Card id='navCard' onClick={handler} >
+          Book Nook [REST]
         </Card>
         <Card id='navCard3' >
           Hardlee's App

@@ -6,11 +6,14 @@ import Navbar from './components/Navbar';
 import Display from './components/Display';
 
 function App() {
-  const [isGames, setIsGames] = useState(true);
+  const [isBook, setIsBook] = useState(false);
+  
 
-  const handleChange = () => {
-    setIsGames(!isGames)
+ const changeDisplay = () => {
+    setIsBook(!isBook);
+    console.log(isBook)
   }
+
 
 
   return (
@@ -18,7 +21,7 @@ function App() {
     <Header />
     <section className='h-screen w-screen'>
       <Display />
-      <Navbar />
+      <Navbar onChange={changeDisplay} />
     </section>
     </>
   )
