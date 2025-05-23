@@ -1,28 +1,25 @@
 
 import './App.css'
-import { useState } from 'react'
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Display from './components/Display';
 import Canvas from './components/Canvas';
+import { useState } from 'react';
 
 function App() {
-  const [view, setView] = useState(<Canvas />);
-  
+  const [view, setView] = useState(<Canvas />);  
+  const [isGames, setIsGames] = useState(true);
 
-//  const changeDisplay = () => {
-//     setIsBook(!isBook);
-//     console.log(isBook)
-//   }
-
-
+    const onChange = () => {
+      setIsGames(!isGames)
+    }
 
   return (
     <>
-    <Header />
+    <Header isGames={isGames} />
     <section className='h-screen w-screen'>
-      <Display view={view} />
-      <Navbar setView={setView} />
+      <Display onClick={onChange} view={view} />
+      <Navbar onClick={onChange} setView={setView} />
     </section>
     </>
   )

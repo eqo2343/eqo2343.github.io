@@ -5,8 +5,9 @@ import { useContext } from 'react'
 import BooksContext from '../book-context/books'
 import BookList from '../book-components/BookList';
 import BookCreate from '../book-components/BookCreate'
+import Canvas from './Canvas';
 
-const Dropdown = ({ ...rest }) => {
+const Dropdown = ({ setView, onClick, ...rest }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [selection, setSelection] = useState(null)
     const divEl = useRef();
@@ -65,9 +66,10 @@ const Dropdown = ({ ...rest }) => {
     }
 
     const handleOptionClickEtch = (option) => {
+      onClick();
       setIsOpen(false);
       setSelection(option);
-      resetDisplay();
+      setView(<Canvas />)
     }
 
   //   const renderedOptions = dropOptions.map((option) => {
