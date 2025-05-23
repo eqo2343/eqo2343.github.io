@@ -2,20 +2,16 @@ import React from 'react'
 import Card from './Card'
 import Dropdown from './Dropdown'
 import './Navbar.css'
-import { useContext } from 'react'
-import BooksContext from '../book-context/books'
 import BookList from '../book-components/BookList';
 import BookCreate from '../book-components/BookCreate'
 import Hardlees from './Hardlees'
 import AboutMe from './AboutMe'
 
-const Navbar = () => {
-
-  const { setDisplay } = useContext(BooksContext);
+const Navbar = ({ setView }) => {
 
 
   const bookDisplay = () => {
-    setDisplay(<div className="app flex flex-col gap-20">
+    setView(<div className="app flex flex-col gap-20">
       <div className='flex p-4 mt-4'>
         <h1>Reading List</h1>
       </div>
@@ -29,11 +25,11 @@ const Navbar = () => {
   }
 
   const hardleesDisplay = () => {
-    setDisplay(<Hardlees />)
+    setView(<Hardlees />)
   }
 
   const aboutMeDisplay = () => {
-    setDisplay(<AboutMe />)
+    setView(<AboutMe />)
   }
 
 

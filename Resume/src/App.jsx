@@ -4,15 +4,16 @@ import { useState } from 'react'
 import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Display from './components/Display';
+import Canvas from './components/Canvas';
 
 function App() {
-  const [isBook, setIsBook] = useState(false);
+  const [view, setView] = useState(<Canvas />);
   
 
- const changeDisplay = () => {
-    setIsBook(!isBook);
-    console.log(isBook)
-  }
+//  const changeDisplay = () => {
+//     setIsBook(!isBook);
+//     console.log(isBook)
+//   }
 
 
 
@@ -20,8 +21,8 @@ function App() {
     <>
     <Header />
     <section className='h-screen w-screen'>
-      <Display />
-      <Navbar onChange={changeDisplay} />
+      <Display view={view} />
+      <Navbar setView={setView} />
     </section>
     </>
   )

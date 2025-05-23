@@ -1,42 +1,10 @@
 import { createContext, useState } from 'react';
 import axios from 'axios';
-import Canvas from '../components/Canvas';
-import BookList from '../book-components/BookList';
-import BookCreate from '../book-components/BookCreate';
-import BookShow from '../book-components/BookShow';
 
 const BooksContext = createContext();
 
 function Provider({ children }) {
   const [books, setBooks] = useState([]);
-  const [isGames, setIsGames] = useState(true);
-  const [isBooks, setIsBooks] = useState(false);
-  const [display, setDisplay] = useState(
-  <div className="app flex flex-col gap-20">
-    <div className='flex p-4 mt-4'>
-      <h1>Reading List</h1>
-    </div>
-    <div className=' w-350 h-200 '>
-      <BookList />
-    </div>
-    <div>
-      <BookCreate />
-    </div>
-  </div>)
-
-  const changeToGames = () => {
-    setIsBooks(false),
-    setIsGames(true);
-  }
-
-  const changeToBooks = () => {
-    setIsBooks(true),
-    setIsGames(false);
-}
-
-const resetDisplay = () => {
-  setDisplay(<Canvas />)
-}
 
   const fetchBooks = async () => {
     const response = await axios.get('http://localhost:3001/books');
@@ -87,15 +55,6 @@ const resetDisplay = () => {
     editBookById,
     createBook,
     fetchBooks,
-    changeToBooks,
-    changeToGames,
-    isGames,
-    setIsGames,
-    isBooks,
-    setIsBooks,
-    display,
-    setDisplay,
-    resetDisplay
 
   };
 
