@@ -1,10 +1,26 @@
 import { createContext, useState } from 'react';
 import axios from 'axios';
+import Canvas from '../components/Canvas';
+import BookList from '../book-components/BookList';
+import BookCreate from '../book-components/BookCreate';
 
 const BooksContext = createContext();
 
 function Provider({ children }) {
   const [books, setBooks] = useState([]);
+  const [isGames, setIsGames] = useState(true);
+  const [isBooks, setIsBooks] = useState(false);
+  const [display, setDisplay] = useState(<Canvas />)
+
+  const changeToGames = () => {
+    setIsBooks(false),
+    setIsGames(true);
+  }
+
+  const changeToBooks = () => {
+    setIsBooks(true),
+    setIsGames(false);
+}
 
   const fetchBooks = async () => {
     const response = await axios.get('http://localhost:3001/books');
@@ -47,13 +63,39 @@ function Provider({ children }) {
     setBooks(updatedBooks);
   };
 
+  const changeDisplay = () => {
+    setDisplay(<div className="app flex flex-col gap-20">
+      <div className='flex p-4 mt-4'>
+        <h1>Reading List</h1>
+      </div>
+      <div className=' w-350 h-200 '>
+        <BookList />
+      </div>
+      <div>
+        <BookCreate />
+      </div>
+    </div>)
+  }
+
   const valueToShare = {
     books,
     deleteBookById,
     editBookById,
     createBook,
     fetchBooks,
+    changeToBooks,
+    changeToGames,
+    isGames,
+    setIsGames,
+    isBooks,
+    setIsBooks,
+    changeDisplay,
+    display,
+    setDisplay
+
   };
+
+
 
   return (
     <BooksContext.Provider value={valueToShare}>
