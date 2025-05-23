@@ -9,12 +9,13 @@ import BookCreate from '../book-components/BookCreate'
 import Hardlees from './Hardlees'
 import AboutMe from './AboutMe'
 
-const Navbar = () => {
+const Navbar = ({ onClick }) => {
 
   const { setDisplay } = useContext(BooksContext);
 
 
   const bookDisplay = () => {
+    onClick();
     setDisplay(<div className="app flex flex-col gap-20">
       <div className='flex p-4 mt-4'>
         <h1>Reading List</h1>
@@ -40,7 +41,7 @@ const Navbar = () => {
 
   return (
     <nav className='flex gap-4 flex-col'>
-        <Dropdown id="drop" />
+        <Dropdown onClick={onClick} id="drop" />
         <Card id='navCard' onClick={bookDisplay} >
           Book Nook [REST]
         </Card>

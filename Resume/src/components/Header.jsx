@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
+import React from 'react'
 import Card from './Card';
 import './Header.css'
 
-const Header = () => {
-  const [isGames, setIsGames] = useState(true);
+const Header = ({ isGames }) => {
+  
 
 //   const handleChange = () => {
 //     setIsGames(!isGames)
