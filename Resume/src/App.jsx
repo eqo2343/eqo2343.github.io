@@ -9,9 +9,15 @@ import { useState } from 'react';
 function App() {
   const [view, setView] = useState(<Canvas />);  
   const [isGames, setIsGames] = useState(true);
+  const [isHardlees, setIsHardlees] = useState(false);
 
     const onChange = () => {
       setIsGames(!isGames)
+    }
+
+    const changeHardlees = () => {
+      setIsGames(false);
+      setIsHardlees(true);
     }
 
   return (
