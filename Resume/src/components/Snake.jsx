@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from 'react';
-import skulpt from 'skulpt';
+import React from 'react';
 
 const Snake = () => {
     

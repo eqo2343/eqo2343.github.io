@@ -9,7 +9,7 @@ function BookList() {
     return <BookShow key={book.id} book={book} />;
   });
 
-  return <div className="book-list flex flex-wrap flex-col h-200 w-200 p-2 gap-3">{renderedBooks}</div>;
+  return <div className="book-list flex flex-wrap flex-col h-200 p-2 gap-3">{renderedBooks}</div>;
 }
 
 export default BookList;

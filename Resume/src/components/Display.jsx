@@ -20,7 +20,7 @@ const Display = ({ view }) => {
 
   return (
     <main className='container '>
-          <Card className='flex text-center w-full h-full rounded-4xl ring-2 ring-sky-300 items-center justify-center'>
+          <Card className='flex text-center w-full h-300 rounded-4xl ring-2 ring-sky-300 items-center justify-center'>
             {view}
           </Card>
       </main>

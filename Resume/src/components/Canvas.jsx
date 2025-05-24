@@ -45,13 +45,13 @@ const Canvas = () => {
 
     return (
         <div className='flex gap-4 flex-col items-center'>
-        <h2 className='text-3xl '>Etch-a-Sketch</h2>
+        <h2 className='text-5xl '>Etch-a-Sketch</h2>
         <canvas
         
           ref={canvasRef}
-          width={900}
-          height={900}
-          style={{ border: '1px solid rgb(56, 189, 248)' }}
+          width={1200}
+          height={1000}
+          style={{ border: '8px solid rgb(56, 189, 248)' }}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}

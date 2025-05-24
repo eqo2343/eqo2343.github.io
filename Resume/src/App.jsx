@@ -5,28 +5,27 @@ import Navbar from './components/Navbar';
 import Display from './components/Display';
 import Canvas from './components/Canvas';
 import { useState } from 'react';
+import cloud from '/home/eqo234/resume-site/resume-site/Resume/src/assets/custom-cloud.svg'
+
 
 function App() {
   const [view, setView] = useState(<Canvas />);  
-  const [isGames, setIsGames] = useState(true);
-  const [isHardlees, setIsHardlees] = useState(false);
+   const [header, setHeader] = useState("Ej's Game Corner")
 
-    const onChange = () => {
-      setIsGames(!isGames)
-    }
-
-    const changeHardlees = () => {
-      setIsGames(false);
-      setIsHardlees(true);
-    }
 
   return (
     <>
-    <Header isGames={isGames} />
-    <section className='h-screen w-screen'>
-      <Display onClick={onChange} view={view} />
-      <Navbar onClick={onChange} setView={setView} />
-    </section>
+      <section className='h-screen w-screen p-10 bg-repeat' >
+        <Display view={view} />
+        <div>
+          <div>
+            <Navbar setHeader={setHeader} setView={setView} />
+          </div>
+          <div className='mt-50'>
+            <Header header={header} />
+          </div>
+        </div>
+      </section>
     </>
   )
 }
