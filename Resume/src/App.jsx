@@ -5,8 +5,6 @@ import Navbar from './components/Navbar';
 import Display from './components/Display';
 import Canvas from './components/Canvas';
 import { useState } from 'react';
-import cloud from '/home/eqo234/resume-site/resume-site/Resume/src/assets/custom-cloud.svg'
-
 
 function App() {
   const [view, setView] = useState(<Canvas />);  
