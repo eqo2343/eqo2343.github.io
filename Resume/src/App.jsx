@@ -10,7 +10,7 @@ import cloud from '/home/eqo234/resume-site/resume-site/Resume/src/assets/custom
 
 function App() {
   const [view, setView] = useState(<Canvas />);  
-   const [header, setHeader] = useState("Ej's Game Corner")
+   const [header, setHeader] = useState(" Game Corner")
 
 
   return (

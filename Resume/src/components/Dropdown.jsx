@@ -43,7 +43,7 @@ const Dropdown = ({ setView, setHeader,  ...rest }) => {
       setIsOpen(false);
       setSelection(option);
       setView(<Canvas />)
-      setHeader("Ej's Game Corner")
+      setHeader("Ej's Sketch Corner")
     }
 
     const handleOptionClickSnake = (option) => {
@@ -71,7 +71,7 @@ const Dropdown = ({ setView, setHeader,  ...rest }) => {
         <Card id='card' className='absolute top-full bg-sky-200 gap-2 flex flex-col w-120'>
           <Card className='hover:bg-sky-100' onClick={() => handleOptionClickEtch()}>Etch-a-Sketch</Card>
           <Card className='hover:bg-sky-100' onClick={() => handleOptionClickSnake()}>Snake [Python]</Card>
-          <Card className='hover:bg-sky-100' onClick={() => handleOptionClickStates()}>US state Quiz [Python]</Card>
+          <Card className='hover:bg-sky-100' onClick={() => handleOptionClickStates()}>US States Quiz [Python]</Card>
         </Card>}
     </div>
   )

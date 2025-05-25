@@ -8,13 +8,12 @@ import { FaGithub } from "react-icons/fa";
 const Hardlees = () => {
   return (
     <div className='flex text-xl text-center gap-10 flex-col p-10 w-full h-full items-center border'>
-      <h3 className='bg-white w-60 underline decoration-sky-400 text-3xl'>My First Project!</h3>
+      <h3 className='bg-white w-60 underline decoration-sky-400 text-3xl'>My First React Project!</h3>
       <p>For my first React application (outside of building components), I chose to 
         recreate what I know.  A few blocks from my house is a Hardees fastfood restaurant,
         and seeing it every day inspired me to recreate their website.  While the application
-        was not 100% faithful, and remains incomplete, the landing page section is mostly 
-        complete from an aesthetic perspective, and would dlay the ground work for framing future
-        applications.
+        remains incomplete, the landing page section is mostly finished aesthetically, 
+        and would lay the ground work for framing future applications.
       </p>
       
       <ul className=' flex gap-5 '>
