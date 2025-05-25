@@ -20,11 +20,12 @@ export default defineConfig({
   build: {
     rollupOptions: {
       external: ['axios', 
-        '/home/eqo234/resume-site/resume-site/Resume/dist/assets/hardlees1-7garVGrS.png',
-        '/home/eqo234/resume-site/resume-site/Resume/dist/assets/hardlees2-DuQ5IO7i.png',
-        '/home/eqo234/resume-site/resume-site/Resume/dist/assets/me2-Cw1j7ivo.jpg',
-        '/home/eqo234/resume-site/resume-site/Resume/dist/assets/snake-DNAFteSf.png',
-        '/home/eqo234/resume-site/resume-site/Resume/dist/assets/states-DGJHrd0q.png'
+        '/home/eqo234/resume-site/resume-site/Resume/src/assets/hardlees1.png',
+        '/home/eqo234/resume-site/resume-site/Resume/src/assets/hardlees2.png',
+        '/home/eqo234/resume-site/resume-site/Resume/src/assets/me2.jpg',
+        '/home/eqo234/resume-site/resume-site/Resume/src/assets/snake.png',
+        '/home/eqo234/resume-site/resume-site/Resume/src/assets/states.png',
+        '/home/eqo234/resume-site/resume-site/Resume/src/assets/custom-cloud.svg',
       ]
     }
   }
