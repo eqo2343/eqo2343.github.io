@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 function App() {
   const [view, setView] = useState(<Canvas />);  
-   const [header, setHeader] = useState(" Game Corner")
+   const [header, setHeader] = useState(" Ej's Project Corner")
 
 
   return (
